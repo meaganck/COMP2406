@@ -1,0 +1,20 @@
+html
+    head
+        title Restaurants
+        <link href='https://fonts.googleapis.com/css?family=Carrois Gothic SC' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        style 
+            include ../style.css
+body
+    include ../partials/header
+
+    div#main(class="center")
+        h1 Restaurants
+        div
+            each restaurant in restaurants
+                a(style="color:#ff8906; font-size: 35px;" href="/restaurants/" + restaurant.id) #{restaurant.name}
+                br

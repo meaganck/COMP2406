@@ -1,0 +1,62 @@
+- var index = 0;
+
+html
+    head
+        title #{restaurant.id}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Carrois Gothic SC' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        style 
+            include ../style.css
+        script
+            include ../../public/client.js
+body
+    include ../partials/header
+    div#restaurantInfo
+        h1 #{restaurant.name}
+        p Minimum Order: #{restaurant.min_order}
+        p Delivery Fee: #{restaurant.delivery_fee}
+        div(class="row")
+            div#menu(class="column")
+                each category in Object.keys(restaurant.menu)
+                    h2 #{category}
+                    each itemID in Object.keys(restaurant.menu[category])
+                        dt #{restaurant.menu[category][itemID].name} ($#{restaurant.menu[category][itemID].price})
+                        dd  ID: #{itemID}
+                        dd  #{restaurant.menu[category][itemID].description}
+            div#addItems(class="column")
+                h2(style="color:#fffffe;" class="center") Modify Restaurant 
+                label(for="newName") Name:
+                input(type="textbox" id="newName")
+                br
+                label(for="newMinOrder") Minimum Order ($): 
+                input(type="textbox" id="newMinOrder")
+                br
+                label(for="newFee") Delivery Fee ($): 
+                input(type="textbox" id="newFee")
+                br
+                h3 Add New Category
+                label(for="newCategory") Category: 
+                input(type="textbox" id="newCategory")
+                br
+                button(class="btn btn-pmm" id="addCategory" onclick="addCategory()") Add
+                h3 Add New Item:
+                label(for="newItemName") Name:
+                input(type="textbox" id="newItemName")
+                br
+                label(for="newItemPrice") Price ($):
+                input(type="textbox" id="newItemPrice")
+                br
+                label(for="newItemDescription") Description: 
+                textarea(id="newItemDescription" rows="4" cols="50")
+                br
+                label(for="newItemCategory") Category:
+                select#newItemCategory
+                    each category in Object.keys(restaurant.menu)
+                        option(value=category) #{category}
+                br
+                button(class="btn btn-pmm" id="saveButton" onclick="save()") Save

@@ -1,0 +1,26 @@
+html
+    head
+        title Add a Restaurant
+        <link href='https://fonts.googleapis.com/css?family=Carrois Gothic SC' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        style 
+            include ../style.css
+body
+    include ../partials/header
+    div#main
+        h1 Add a Restaurant
+        label(for="name") Name:
+        input(type="textbox" id="name")
+        br
+        label(for="delieveryfee") Delievery Fee ($):
+        input(type="textbox" id="delieveryfee")
+        br
+        label(for="minorder") Minimum order ($):
+        input(type="textbox" id="minorder")
+        br
+        button(class="btn btn-pmm" id="submit" onclick="submit()") Add Restaurant
+    script
+            include ../../public/addRestaurant.js
