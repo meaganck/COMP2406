@@ -1,0 +1,25 @@
+html
+    head
+        title Profile
+body
+    include partials/header
+    div#main
+        h1 #{u.username}
+        p Privacy: #{u.privacy}
+        if(u.orderHistory)
+            h2 Order History
+        if(currUser)
+            h2 Change Privacy
+            form(action="/users/"+ ID + "/updatePrivacy" method="post")
+                select(name="privacy" id="privacy")
+                    option(value=(!u.privacy).toString()) #{!u.privacy}
+                    option(value=u.privacy.toString()) #{u.privacy}
+                br
+                br
+                input(type="submit" value="Save")
+        if(u.orderSummary)
+            h2 Previous Orders
+            p
+            each order in u.orderSummary    
+                a(href="/orders/" + order) #{order}
+                br

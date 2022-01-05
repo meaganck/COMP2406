@@ -1,0 +1,20 @@
+head    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+style 
+    include ../style.css
+div#header
+    a(href="/") Home
+    |
+    a(href="/users") Users
+    if loggedIn
+        a(href="/orderform") Order Form 
+        |
+        a(href="/users/" + ID) Profile
+        | 
+        a(href="/logout") Logout
+    else
+        a(href="/registration") Registration
+        |
+        a(href="/login") Login

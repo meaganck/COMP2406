@@ -1,0 +1,134 @@
+.show {display: block;}
+
+* {
+box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}
+
+h1{
+    font-size: 80px;
+    color: #0f0e17;
+    text-align: center;
+}
+
+h2{
+    
+    font-size: 45px;
+    color: #0f0e17;
+}
+h3{
+    font-size: 35px;
+}
+
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color:  #2e2f3e;
+    background-color:#fffffe;
+    font-size: 25px;
+}
+
+a{
+    color: #0f0e17;
+    font-size: 30px;
+
+}
+
+a:link{
+    text-decoration: none;
+    padding-right:15px;
+
+}
+  
+a:hover, a:active {
+    color: #a7a9be;
+}
+
+.img{
+    float: right;
+    width: 10%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    text-align:center;
+}
+
+#restaurant-select{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px; 
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#info{
+    font-size: 30px;  
+}
+#left{
+    font-size: 50px;
+}
+
+button{
+    padding: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    min-width: 100px;
+    border-radius: 12px;
+    border: none;
+    margin: 20px;
+    background-color: #bae8e8;
+    color:#2d334a;
+}
+
+input[type=submit] {
+    padding: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    min-width: 100px;
+    border-radius: 12px;
+    border: none;
+    background-color: #bae8e8;
+    color:#2d334a;
+
+}
+
+button:hover {
+    background-color: #e3f6f5;
+    color: #a7a9be;
+}
+
+input[type=submit]:hover {
+    background-color: #e3f6f5;
+    color: #a7a9be;
+}
+
+div{
+    padding: 25px;
+}
+
+input{
+    margin-bottom: 15px;
+}
+
+label{
+    padding: 16px;
+    font-size: 30px;
+}

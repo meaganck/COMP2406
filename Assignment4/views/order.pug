@@ -1,0 +1,23 @@
+html
+    head
+        title Order Summary
+body
+    include partials/header
+    div#main
+        h1 Order Summary 
+        h3 #{order.name}
+        p 
+        | Submitted by: #{user}
+        br
+        h3 Order
+        each item in order.order 
+            p #{item.name} (x#{item.quantity})
+            |   
+        br
+        | Subtotal: $#{order.subtotal.toFixed(2)}
+        br
+        | Tax: $#{order.tax.toFixed(2)}
+        br
+        | Delivery fee: $#{order.deliveryfee.toFixed(2)}
+        br
+        | Total: $#{order.total.toFixed(2)}

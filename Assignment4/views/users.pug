@@ -1,0 +1,10 @@
+html
+    head
+        title Profile
+body
+    include partials/header
+    div(class="center")
+        h1 User Directory 
+        each user in users
+            a(href="/users/"+ user._id) #{user.username}
+            br
