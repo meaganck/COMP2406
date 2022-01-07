@@ -1,0 +1,25 @@
+html
+    head
+        title Restaurant Statistics
+        <link href='https://fonts.googleapis.com/css?family=Carrois Gothic SC' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        style 
+            include ../style.css
+body
+    include ../partials/header
+
+    div#main.center
+        h1 Statistics
+         each restaurant in stats
+            h2 #{restaurant.name}
+            p Total Number of Orders: #{restaurant.totalOrders}
+            if restaurant.avgTotal > 0
+                 p Average Order Total: $#{restaurant.avgTotal}
+            else 
+                 p Average Order Total: #{restaurant.avgTotal}
+            if restaurant.mostPopularItem
+                p Most Popular Item: #{restaurant.mostPopularItem.name} (#{restaurant.mostPopularItem.quantity})
+    include ../partials/footer

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Carrois Gothic SC' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href ="style.css" rel= "stylesheet">
+        <script src="client.js"></script>
+    </head> 
+<html>
+<body onload="init()">
+    <div id="header">
+        <a href="/">Home</a>
+        <a href="/orderForm">Order Form</a>
+        <a href="/stats">Stats</a>
+    </div>
+
+    <div class="dropdown">
+        <button onclick="displayDropdown()" class="dropbtn">Select A Menu</button>
+        <div id="myDropdown" class="dropdown-content">
+        </div>
+      </div>
+    <div id="content">
+        <div id="MainInfo">
+            <h1 id="title"></h1>
+            <div id = "orderInfo">
+                <p id="minOrder"></p>
+                <p id="deliveryFee"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="categories" class="column">
+            </div>
+            <div id="menu" class="column">
+              
+            </div>
+            <div id="order" class="column">
+                <div id="cart">
+
+                </div>
+                <div id="summary">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

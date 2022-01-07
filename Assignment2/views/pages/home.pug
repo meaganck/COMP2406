@@ -1,0 +1,19 @@
+html
+    head
+        title Home Page
+        <link href='https://fonts.googleapis.com/css?family=Carrois Gothic SC' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        style 
+            include ../style.css
+body
+    include ../partials/header
+
+    div#main
+        h1 Welcome to the Home Page	
+        // Image source:
+        // https://www.flickr.com/photos/michaelmattiphotography/11160588055
+        img(src='../shire.jpg' alt='Image of Shire' class='center' style="padding-bottom: 10%;")
+    include ../partials/footer
