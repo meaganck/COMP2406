@@ -10,7 +10,7 @@ Design Decisions:
 
 How to run:
     1. Make sure node.js is installed
-    2. Type 'npm init' into the terminal to install dependencies
+    2. Type 'npm install' into the terminal to install dependencies
     3. Run server by typing: "node restaurant-server.js"
     4. Go to http://localhost:3000/
     5. Website should be loaded
