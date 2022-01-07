@@ -12,4 +12,4 @@ Additional Info:
     - user-handlers.js contains handlers for login and registration because it was easier to add pop up alerts. 
         The order form, and the change privacy are handled by forms from the pug files and are sent using POST
         
-*** NOTE: the database-initializer.js was not done by me, and was given for the assignment.
+*** NOTE: the database-initializer.js was not done by me, and was given for the assignment. However, I added a collection called "orders" to it.
